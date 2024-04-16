@@ -39,11 +39,11 @@ select ROW_NUMBER()OVER(ORDER BY pat.id, pt.start_year) payer_plan_period_id,
 	   pay.name                                         plan_source_value,
 	   0                                                plan_source_concept_id,
 	   0                                                sponsor_concept_id,
-	   CAST(NULL AS VARCHAR)                            sponsor_source_value,
+	   CAST(null as varchar(4))                            sponsor_source_value,
 	   0                                                sponsor_source_concept_id,
-	   CAST(NULL AS VARCHAR)                            family_source_value,
+	   CAST(null as varchar(4))                            family_source_value,
 	   0                                                stop_reason_concept_id,
-	   CAST(NULL AS VARCHAR)                            stop_reason_source_value,
+	   CAST(null as varchar(4))                            stop_reason_source_value,
 	   0                                                stop_reason_source_concept_id
   from @synthea_schema.payers pay
   join @synthea_schema.payer_transitions pt

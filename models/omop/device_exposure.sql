@@ -8,7 +8,7 @@ select
   d.stop as device_exposure_end_datetime,
   32827 as device_type_concept_id,
   d.udi as unique_device_id,
-  cast(null as varchar) as production_id,
+  cast(null as varchar(4)) as production_id,
   cast(null as int) as quantity,
   pr.provider_id as provider_id,
   fv.visit_occurrence_id_new as visit_occurrence_id,
@@ -16,7 +16,7 @@ select
   d.code as device_source_value,
   srctosrcvm.source_concept_id as device_source_concept_id,
   cast(null as int) as unit_concept_id,
-  cast(null as varchar) as unit_source_value,
+  cast(null as varchar(4)) as unit_source_value,
   cast(null as int) as unit_source_concept_id
 from {{ ref('synthea_devices') }} as d
 inner join {{ ref ('source_to_standard_vocab_map') }} as srctostdvm

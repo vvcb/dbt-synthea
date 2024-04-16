@@ -2,7 +2,7 @@ name: 'synthea_omop_etl'
 version: '0.2.0'
 config-version: 2
 
-profile: 'synthea_omop_etl'
+profile: 'dbt_synthea_databricks'
 
 model-paths: ["models"]
 analysis-paths: ["analyses"]

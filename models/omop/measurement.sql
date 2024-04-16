@@ -17,8 +17,8 @@ with snomed_measurements as (
     fv.visit_occurrence_id_new + 1000000 as visit_detail_id,
     pr.code as measurement_source_value,
     srctosrcvm.source_concept_id as measurement_source_concept_id,
-    cast(null as varchar) as unit_source_value,
-    cast(null as varchar) as value_source_value,
+    cast(null as varchar(4)) as unit_source_value,
+    cast(null as varchar(4)) as value_source_value,
     cast(null as int) as unit_source_concept_id,
     cast(null as bigint) as measurement_event_id,
     cast(null as int) as meas_event_field_concept_id
@@ -57,11 +57,7 @@ loinc_measurements as (
     o.date as measurement_time,
     32827 as measurement_type_concept_id,
     0 as operator_concept_id,
-    case
-      when isnumeric(o.value) = 1
-        then cast(o.value as float)
-      else cast(null as float)
-    end as value_as_number,
+    try_cast(o.value as float) as value_as_number,
     coalesce(srcmap2.target_concept_id, 0) as value_as_concept_id,
     coalesce(srcmap1.target_concept_id, 0) as unit_concept_id,
     cast(null as float) as range_low,

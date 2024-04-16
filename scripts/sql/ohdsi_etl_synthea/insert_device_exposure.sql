@@ -31,7 +31,7 @@ d.stop                                      device_exposure_end_date,
 d.stop                                      device_exposure_end_datetime,
 32827                                    device_type_concept_id,
 d.udi                                       unique_device_id,
-cast(null as varchar)                       production_id,
+cast(null as varchar(4))                       production_id,
 cast(null as int)                           quantity,
 pr.provider_id                              provider_id,
 fv.visit_occurrence_id_new                  visit_occurrence_id,
@@ -39,7 +39,7 @@ fv.visit_occurrence_id_new+1000000          visit_detail_id,
 d.code                                      device_source_value,
 srctosrcvm.source_concept_id                device_source_concept_id,
 cast(null as int)                           unit_concept_id,
-cast(null as varchar)                       unit_source_value,
+cast(null as varchar(4))                       unit_source_value,
 cast(null as int)                           unit_source_concept_id
 
 from @synthea_schema.devices d

@@ -3,6 +3,6 @@ select
   {{ adapter.quote("stop") }},
   {{ adapter.quote("patient") }},
   {{ adapter.quote("encounter") }},
-  {{ adapter.quote("code") }},
+  cast({{ adapter.quote("code") }} as varchar(50)),
   {{ adapter.quote("description") }}
 from {{ source('synthea', 'allergies') }}

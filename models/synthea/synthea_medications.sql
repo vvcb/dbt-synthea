@@ -4,7 +4,7 @@ select
   {{ adapter.quote("patient") }},
   {{ adapter.quote("payer") }},
   {{ adapter.quote("encounter") }},
-  {{ adapter.quote("code") }},
+  cast({{ adapter.quote("code") }} as varchar(50)),
   {{ adapter.quote("description") }},
   {{ adapter.quote("base_cost") }},
   {{ adapter.quote("payer_coverage") }},

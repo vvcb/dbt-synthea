@@ -25,4 +25,6 @@
             "packages.yml"
         ]
     },
+    "dbt.enableNewLineagePanel": true,
+    "dbt.queryTemplate": "select top {limit} * from ({query}) as query",
 }

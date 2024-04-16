@@ -3,7 +3,7 @@ version: 2
 
 sources:
   - name: vocab
-    schema: vocab
+    schema: dev_vc
     tables:
       - name: concept
       - name: concept_ancestor

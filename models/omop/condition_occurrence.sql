@@ -7,7 +7,7 @@ select
   c.stop as condition_end_date,
   c.stop as condition_end_datetime,
   32827 as condition_type_concept_id,
-  cast(null as varchar) as stop_reason,
+  cast(null as varchar(4)) as stop_reason,
   pr.provider_id as provider_id,
   fv.visit_occurrence_id_new as visit_occurrence_id,
   fv.visit_occurrence_id_new + 1000000 as visit_detail_id,

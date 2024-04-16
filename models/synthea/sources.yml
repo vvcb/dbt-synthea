@@ -3,7 +3,7 @@ version: 2
 
 sources:
   - name: synthea
-    schema: synthea
+    schema: synthea1k
     tables:
       - name: allergies
       - name: careplans

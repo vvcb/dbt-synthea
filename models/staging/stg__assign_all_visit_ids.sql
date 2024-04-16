@@ -35,8 +35,8 @@ select
         end
       )
   end as visit_occurrence_id_new
-from {{ ref('synthea_encounters') }}
-inner join {{ ref('stg__all_visits') }}
+from {{ ref('synthea_encounters') }} as e
+inner join {{ ref('stg__all_visits') }} as av
   on
     e.patient = av.patient
     and e.start >= av.visit_start_date

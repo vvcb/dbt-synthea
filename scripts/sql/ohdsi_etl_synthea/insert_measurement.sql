@@ -77,8 +77,8 @@ select
   fv.visit_occurrence_id_new + 1000000     visit_detail_id,
   pr.code                                  measurement_source_value,
   srctosrcvm.source_concept_id             measurement_source_concept_id,
-  cast(null as varchar)                    unit_source_value,
-  cast(null as varchar)                    value_source_value,
+  cast(null as varchar(4))                    unit_source_value,
+  cast(null as varchar(4))                    value_source_value,
   cast(null as int)                        unit_source_concept_id,
   cast(null as bigint)                     measurement_event_id,
   cast(null as int)                        meas_event_field_concept_id

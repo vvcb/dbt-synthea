@@ -61,11 +61,11 @@ coalesce(m.stop,m.start)                     drug_exposure_end_date,
 coalesce(m.stop,m.start)                     drug_exposure_end_datetime,
 m.stop                                       verbatim_end_date,
 32838                                        drug_type_concept_id,
-cast(null as varchar)                        stop_reason,
+cast(null as varchar(4))                        stop_reason,
 0                                            refills,
 0                                            quantity,
 coalesce(datediff(day,m.start,m.stop),0)     days_supply,
-cast(null as varchar)                        sig,
+cast(null as varchar(4))                        sig,
 0                                            route_concept_id,
 0                                            lot_number,
 pr.provider_id                               provider_id,
@@ -73,8 +73,8 @@ fv.visit_occurrence_id_new                   visit_occurrence_id,
 fv.visit_occurrence_id_new + 1000000         visit_detail_id,
 m.code                                       drug_source_value,
 srctosrcvm.source_concept_id                 drug_source_concept_id,
-cast(null as varchar)                        route_source_value,
-cast(null as varchar)                        dose_unit_source_value
+cast(null as varchar(4))                        route_source_value,
+cast(null as varchar(4))                        dose_unit_source_value
 from @synthea_schema.medications m
 join @cdm_schema.source_to_standard_vocab_map srctostdvm
   on srctostdvm.source_code             = m.code
@@ -106,11 +106,11 @@ i.date                                      drug_exposure_end_date,
 i.date                                      drug_exposure_end_datetime,
 i.date                                      verbatim_end_date,
 32827                                       drug_type_concept_id,
-cast(null as varchar)                       stop_reason,
+cast(null as varchar(4))                       stop_reason,
 0                                           refills,
 0                                           quantity,
 0                                           days_supply,
-cast(null as varchar)                       sig,
+cast(null as varchar(4))                       sig,
 0                                           route_concept_id,
 0                                           lot_number,
 pr.provider_id                              provider_id,
@@ -118,8 +118,8 @@ fv.visit_occurrence_id_new                  visit_occurrence_id,
 fv.visit_occurrence_id_new + 1000000        visit_detail_id,
 i.code                                      drug_source_value,
 srctosrcvm.source_concept_id                drug_source_concept_id,
-cast(null as varchar)                       route_source_value,
-cast(null as varchar)                       dose_unit_source_value
+cast(null as varchar(4))                       route_source_value,
+cast(null as varchar(4))                       dose_unit_source_value
 from @synthea_schema.immunizations i
 join @cdm_schema.source_to_standard_vocab_map srctostdvm
   on srctostdvm.source_code             = i.code
