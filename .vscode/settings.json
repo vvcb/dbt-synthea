@@ -3,10 +3,6 @@
         "*.sql": "jinja-sql",
         "**/target/**": ""
     },
-<<<<<<< HEAD
-    "python.terminal.activateEnvInCurrentTerminal": true,
-=======
->>>>>>> 7faac3f (Remove venv in devcontainer)
     "dbt.queryLimit": 500,
     "dbt.enableNewLineagePanel": true,
     "[yaml]": {
