@@ -3,8 +3,18 @@
         "*.sql": "jinja-sql",
         "**/target/**": ""
     },
+<<<<<<< HEAD
     "python.terminal.activateEnvInCurrentTerminal": true,
+=======
+>>>>>>> 7faac3f (Remove venv in devcontainer)
     "dbt.queryLimit": 500,
+    "dbt.enableNewLineagePanel": true,
+    "[yaml]": {
+        "editor.insertSpaces": true,
+        "editor.tabSize": 2,
+        "editor.autoIndent": "advanced",
+        "diffEditor.ignoreTrimWhitespace": false
+    },
     "yaml.schemas": {
         "https://raw.githubusercontent.com/dbt-labs/dbt-jsonschema/main/schemas/dbt_yml_files.json": [
             "/**/*.yml",
@@ -23,5 +33,5 @@
         "https://raw.githubusercontent.com/dbt-labs/dbt-jsonschema/main/schemas/packages.json": [
             "packages.yml"
         ]
-    },
+    }
 }
